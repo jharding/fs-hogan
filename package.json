@@ -3,7 +3,7 @@
   "description": "Fork of hogan.js that falls back to fs for partials.",
   "version": "0.0.0",
   "keywords": ["mustache", "template"],
-  "main": "./lib/hogan.js",
+  "main": "./lib/fs_hogan.js",
   "author": {
     "name": "Jake Harding",
     "email": "jacob.s.harding@gmail.com"
@@ -27,6 +27,5 @@
     "jsdom": "0.2.10",
     "step": "0.0.5",
     "rimraf": "2.0.1"
-  },
-  "bin" : { "hulk" : "./bin/hulk" }
+  }
 }
