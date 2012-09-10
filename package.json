@@ -1,8 +1,11 @@
 {
   "name": "fs-hogan",
   "description": "Fork of hogan.js that falls back to file system for partials.",
-  "version": "0.0.0",
-  "keywords": ["mustache", "template"],
+  "version": "0.0.1",
+  "keywords": [
+    "mustache",
+    "template"
+  ],
   "main": "./lib/fs_hogan.js",
   "author": {
     "name": "Jake Harding",
@@ -18,8 +21,8 @@
       "url": "http://www.apache.org/licenses/LICENSE-2.0"
     }
   ],
-  "dependencies" : {
-    "nopt" : "1.0.10",
+  "dependencies": {
+    "nopt": "1.0.10",
     "mkdirp": "0.3.0"
   },
   "devDependencies": {
