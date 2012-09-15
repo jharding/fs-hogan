@@ -1,0 +1,6 @@
+{{<supers/layout}}
+{{$content}}
+<h1>Hello World!</h1>
+<p>{{>partials/lorem_ipsum}}</p>
+{{/content}}
+{{/supers/layout}}
