@@ -1,7 +1,7 @@
 fs-hogan
 ========
 
-fs-hogan is a fork of [Hogan.js](hogan.js), a fast mustache-compatible templating engine that supports template inheritance (supers), a feature that may make it into the [official spec for mustache v2.0.0](inheritance). The goal of fs-hogan is to take advantage of Hogan.js while also making rendering templates from the file system a breeze.
+fs-hogan is a fork of [Hogan.js][hogan.js], a fast mustache-compatible templating engine that supports template inheritance (supers), a feature that may make it into the [official spec for mustache v2.0.0][inheritance]. The goal of fs-hogan is to take advantage of Hogan.js while also making rendering templates from the file system a breeze.
 
 [hogan.js]: http://twitter.github.com/hogan.js/
 [inheritance]: https://github.com/mustache/spec/issues/38
@@ -28,7 +28,7 @@ var hogan = require('fs-hogan');
 * __templates__: the path fs-hogan will look for templates in. [default: `'views'`] 
 * __extension__: the file extension used for templates. [default: `'hjs'`] 
 
-In addition to these options, fs-hogan also supports the [compilation options](options) of Hogan.js.
+In addition to these options, fs-hogan also supports the [compilation options][options] of Hogan.js.
 
 [options]: https://github.com/twitter/hogan.js#compilation-options
 
@@ -47,6 +47,26 @@ When `path` is a relative path, `templates` will be used as the base path.
 ### Example
 
 A working example of fs-hogan exists in the */examples* directory.
+
+### Express
+
+fs-hogan works great with [Express][express].
+
+[express]: http://expressjs.com/
+
+```javascript
+var express = require('express');
+var hogan = require('fs-hogan');
+
+var app = express();
+
+app.configure(function() {
+  app.set('views', __dirname + '/views');
+  app.set('view engine', 'hjs');                                                
+  hogan.set({ templates: app.get('views'), extension: app.get('view engine') });
+  app.engine('hjs', hogan.renderFile);
+});
+```
 
 Issues
 ------
