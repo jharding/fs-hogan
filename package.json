@@ -4,7 +4,9 @@
   "version": "0.1.0",
   "keywords": [
     "mustache",
-    "template"
+    "template",
+    "express",
+    "file system"
   ],
   "main": "./lib/fs_hogan.js",
   "author": {
